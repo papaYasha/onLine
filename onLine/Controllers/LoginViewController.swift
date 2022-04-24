@@ -8,12 +8,22 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    // MARK: - ViewDidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
+    // MARK: - Actions
 
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+    }
 }
 

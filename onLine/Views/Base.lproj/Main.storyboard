@@ -41,6 +41,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="esb-W4-cJI"/>
                                             <segue destination="lnj-lC-9lY" kind="presentation" modalPresentationStyle="fullScreen" id="ESy-f8-Qe4"/>
                                         </connections>
                                     </button>
@@ -55,6 +56,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNs-t8-YzB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -72,6 +76,10 @@
                             <constraint firstItem="cxY-YY-SNr" firstAttribute="centerX" secondItem="4eY-ag-eyE" secondAttribute="centerX" id="wbN-gE-jaJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logInButton" destination="bEI-6O-KIA" id="lCM-YD-lpc"/>
+                        <outlet property="registerButton" destination="86v-ua-vgp" id="dh4-HD-jWS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starsReg" translatesAutoresizingMaskIntoConstraints="NO" id="0p1-Mh-wGf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple gradient" translatesAutoresizingMaskIntoConstraints="NO" id="0p1-Mh-wGf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zR-KE-zza">
@@ -94,6 +102,9 @@
                                 <state key="normal" title="Log in">
                                     <color key="titleColor" red="0.58818834740000003" green="0.59184882910000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="DpJ-g6-eZn" eventType="touchUpInside" id="Ukh-Ga-hJd"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hxu-xf-Gef">
                                 <rect key="frame" x="20" y="389" width="374" height="118"/>
@@ -157,6 +168,10 @@
                             <constraint firstItem="hxu-xf-Gef" firstAttribute="centerY" secondItem="BrB-5O-9Ck" secondAttribute="centerY" id="opE-tj-WAV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="qb4-tV-vhw" id="m7Y-PY-91B"/>
+                        <outlet property="passwordTextField" destination="ejW-m0-iJf" id="5cs-az-rka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWd-uU-Tb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +185,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starsReg" translatesAutoresizingMaskIntoConstraints="NO" id="f7C-79-Ak2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple gradient" translatesAutoresizingMaskIntoConstraints="NO" id="f7C-79-Ak2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="f9x-Fp-zec">
@@ -214,6 +229,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.58818834739149983" green="0.59184882913243553" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="lnj-lC-9lY" eventType="touchUpInside" id="wxz-cz-RxI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nS-n1-jAa">
                                 <rect key="frame" x="20" y="605" width="374" height="33"/>
@@ -243,15 +261,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L9H-TF-2XC"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="FCr-0f-rsQ" id="O7M-vt-pHR"/>
+                        <outlet property="passwordTextField" destination="VrB-x4-vh9" id="6Oy-Vy-6qa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e61-re-831" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="914.49275362318849" y="-301.33928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="3c3-sd-JT5">
             <objects>
-                <viewController id="lv3-0G-L0r" sceneMemberID="viewController">
+                <viewController id="lv3-0G-L0r" customClass="ChatViewController" customModule="onLine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rMk-RR-Wim">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,6 +294,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="tintColor" red="0.89419949440000002" green="0.99731532150000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="sentButtonPressed:" destination="lv3-0G-L0r" eventType="touchUpInside" id="VyI-eX-IdR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -292,6 +317,11 @@
                             <constraint firstItem="fLi-ln-tUe" firstAttribute="top" secondItem="o6F-Xr-CtA" secondAttribute="bottom" constant="10" id="jjZ-b0-K57"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="rff-vV-teG" id="w3x-Qu-B6C"/>
+                        <outlet property="sentButton" destination="lh0-vi-5DR" id="d2J-xX-vQc"/>
+                        <outlet property="tableView" destination="o6F-Xr-CtA" id="Oct-t5-Rlg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTw-NS-bF0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -301,7 +331,7 @@
     <resources>
         <image name="onLine" width="558" height="308"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <image name="starsReg" width="220" height="508"/>
+        <image name="purple gradient" width="328" height="622"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
